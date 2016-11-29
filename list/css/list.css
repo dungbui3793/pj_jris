@@ -1,0 +1,225 @@
+
+/* CSS for content irc*/
+.content-center {
+    margin: 0 auto;
+    width: 1200px;
+    background-color: #f5f5f5;
+    padding-bottom: 60px;
+}
+.content-section {
+    width: 1000px;
+    margin: 0 auto;
+}
+.breadcrumb {
+    font-size: 14px;
+    padding-top:3px;
+    margin-bottom: 10px;
+}
+.breadcrumb p{
+    display: inline-block;
+}
+.breadcrumb img {
+    margin: 0 5px 4px 5px;
+}
+.title-table {
+    height: 45px;
+    padding-top: 15px;
+    padding-left: 20px;
+    background-color: #ebebeb;
+    font-size: 24px;
+    border-bottom: 1px solid #c8c8c8;
+}
+.detail-content {
+    background-color: #fafafa;
+    box-shadow: 0px 2px 5px #d1d1d1;
+    -moz-box-shadow: 0px 2px 5px #d1d1d1;
+    -webkit-box-shadow: 0px 2px 5px #d1d1d1;
+    margin-bottom: 40px;
+}
+.center-content {
+    margin: 30px 30px 0;
+    padding-bottom: 30px;
+}
+th {
+    text-align: left;
+    padding-left: 10px;
+    font-size: 14px;
+    color: #999999;
+    font-weight: normal;
+    height: 30px;
+}
+.col-1{
+    width: 80px;
+}
+.col-2{
+    width: 170px;
+}
+.col-3{
+    width: 135px;
+}
+.col-4{
+    width: 140px;
+}
+.col-5{
+    width: 115px;
+}
+.col-6{
+    width: 100px;
+}
+.red {
+    color: #ff3333;
+}
+.green {
+    color: #009688;
+}
+td {
+    padding-left: 10px;
+    font-size: 14px;
+    color: #4d4d4d;
+}
+.col-2-content {
+    color: #00b0ff;
+    line-height: 25px;
+    text-align: justify;
+    padding-right: 10px;
+    font-size: 16px;
+}
+.col-2-content:hover {
+    opacity: 0.6;
+    text-decoration: underline;
+}
+.col-3-content {
+    display: inline-block;
+    width: 100px;
+    word-wrap: break-word;
+}
+.col-4-content {
+    display: inline-block;
+    width: 125px;
+    word-wrap: break-word;
+}
+.col-5-content {
+    font-size: 16px;
+}
+th, td {
+    border-bottom: 1px solid #c8c8c8;
+}
+table {
+    width: 100%;
+    margin-top: 40px;
+}
+.img-detail {
+    position: relative;
+    height: 39px;
+    float: left;
+    width: 124px;
+}
+.img-detail.edit {
+    background: url("../images/edit.png") no-repeat;
+}
+.img-detail.edit.disable {
+    background: url("../images/cannot-edit.png") no-repeat;
+}
+.img-detail img {
+    position: absolute;
+}
+.img-detail p {
+    position: absolute;
+    margin: 0;
+    left: 31px;
+    top: 9px;
+    color: #4c4c4c;
+}
+.img-detail.edit.disable p {
+    color: #d3d3d3;
+}
+.img-detail.detail {
+    background: url("../images/detail.png") no-repeat;
+}
+.img-detail.detail.disable {
+    background: url("../images/cannot-detail.png") no-repeat;
+}
+.img-detail.doc {
+    background: url("../images/doc.png") no-repeat;
+}
+.img-detail.doc.disable {
+    background: url("../images/cannot-doc.png") no-repeat;
+}
+.img-detail.detail.disable p {
+    color: #d3d3d3;
+}
+.img-detail.doc.disable p {
+    color: #d3d3d3;
+}
+.col2-1 {
+    width: 160px;
+}
+.col2-2 {
+    width: 315px;
+}
+.col2-3 {
+    width: 295px;
+}
+.col-3-c {
+    display: inline-block;
+    width: 295px;
+    word-wrap: break-word;
+}
+.btn-back, .btn-next {
+    background: #999999;
+    width: 90px;
+    height: 35px;
+    display: inline-block;
+}
+.btn-back.disable, .btn-next.disable {
+    background: #dddddd;
+}
+.btn-back {
+    float:left
+}
+.btn-next {
+    float:right
+}
+.btn-back p, .btn-next p{
+    margin: 0;
+    display: inline-block;
+    padding: 7px 10px;
+    color: #fcfcfc;
+}
+.btn-back img, .btn-next img{
+    display: inline-block;
+    margin-top: -5px;
+}
+.page-no , .page-no p{
+    display: inline-block;
+    height: 35px;
+    margin: 0;
+}
+.page-no {
+    margin-top: 7px;
+    height: 28px;
+}
+.page-bottom {
+    text-align: center;
+    margin-top: 20px;
+}
+.current-page {
+    font-weight: bold;
+    color: #4c4c4c;
+    font-size: 18px;
+}
+.total-page {
+    font-size: 16px;
+    color: #737373;
+}
+.full-button{
+    width: 100%;
+    display: inline-block;
+}
+.full-button.first-btn{
+    margin-top: 18px;
+}
+.full-button.last-btn{
+    margin-bottom: 12px;
+}
+/* End CSS for content irc*/

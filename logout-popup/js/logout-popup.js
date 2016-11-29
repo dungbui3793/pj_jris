@@ -1,0 +1,9 @@
+$(document).ready(function(){
+    $(".confirm-no").click(function(){
+        $(".popup-logout").empty();
+    });
+    $(".confirm-yes").click(function(){
+        $(".popup-logout").empty();
+        alert("logout");
+    });
+});

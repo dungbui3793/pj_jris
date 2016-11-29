@@ -1,0 +1,266 @@
+
+/* CSS for content irc*/
+.content-center {
+    width: 1200px;
+    margin: 0 auto;
+    background-color: #f5f5f5;
+    padding-bottom: 70px;
+}
+.content-section {
+    width: 1000px;
+    margin: 0 auto;
+}
+.breadcrumb {
+    font-size: 14px;
+    padding-top:3px;
+    margin-bottom: 10px;
+}
+.breadcrumb p{
+    display: inline-block;
+}
+.breadcrumb img {
+    margin: 0 5px 4px 5px;
+}
+.title-table {
+    height: 45px;
+    padding-top: 15px;
+    padding-left: 20px;
+    background-color: #ebebeb;
+    font-size: 24px;
+    border-bottom: 1px solid #c8c8c8;
+}
+.detail-content {
+    background-color: #fafafa;
+    box-shadow: 0px 2px 5px #d1d1d1;
+    -moz-box-shadow: 0px 2px 5px #d1d1d1;
+    -webkit-box-shadow: 0px 2px 5px #d1d1d1;
+}
+.center-content {
+    margin: 30px;
+}
+.table-1 {
+    margin-top: 20px;
+    width: 100%;
+}
+.table-1 th {
+    font-size: 14px;
+    color: #999999;
+    font-weight: normal;
+    text-align: left;
+    padding:6px 10px;
+    border-bottom: 1px solid #c8c8c8;
+}
+.table-1 td{
+    padding: 0 10px;
+    height: 84px;
+}
+.No{
+    width: 90px;
+}
+th.No-detail {
+    width: 345px;
+}
+p.No-detail{
+    width: 325px;
+    display: inline-block;
+    word-wrap: break-word;
+    padding-right: 20px;
+}
+.budget {
+    width: 150px;
+}
+.budget-detail {
+    font-size: 14px;
+}
+.reviewer {
+    width: 125px;
+}
+p.No-detail{
+    color: #00b0ff;
+}
+.img-detail {
+    position: relative;
+    height: 39px;
+}
+.img-detail img {
+    position: absolute;
+}
+.img-detail p {
+    position: absolute;
+    margin: 0;
+    left: 42px;
+    top: 9px;
+    color: #4c4c4c;
+}
+.text-section-1 {
+    margin-top: 28px;
+    height: 115px;
+    background-color: #e8eef2;
+    margin-bottom: 6px;
+}
+.font-medium {
+    padding-top: 17px;
+    font-size: 16px;
+    padding-left: 35px;
+    margin: 0;
+}
+.font-small {
+    font-size: 12px;
+    margin: 0;
+    padding-left: 29px;
+    padding-top: 3px;
+}
+.font-small.left-space {
+    padding-left: 101px;
+}
+.title-section {
+    color: #126492;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 19px 0 5px 10px;
+}
+.section-detail {
+    margin: 5px 0 10px 35px;
+    font-size: 16px;
+    color: #4d4d4d;
+    display: inline-block;
+}
+.section-detail-eng {
+    margin: 0 0 10px 35px;
+    font-size: 14px;
+    color: #999999;
+    display: inline-block;
+}
+.section-detail-eng span {
+    font-family: "Hiragino Kaku Gothic ProN","メイリオ", sans-serif;
+    font-size: 16px;
+}
+.table-score {
+    margin-left: 35px;
+
+}
+.table-score .col-1{
+    color: #999999;
+    font-size: 16px;
+    padding-top: 12px;
+    vertical-align: top;
+}
+.table-score .col-2{
+    padding-left: 10px;
+    padding-top: 12px;
+    vertical-align: top;
+    display: inline-block;
+    width: 725px;
+    word-wrap: break-word;
+}
+.table-score .col-2 p{
+    display: inline-block;
+    margin: 0;
+    font-size: 20px;
+    line-height: 14px;
+}
+.table-score .col-2 p.real-score {
+    font-size: 24px;
+    line-height: 17px;
+}
+.txt-comment {
+    -moz-box-shadow: inset 0 0 4px #BFBFBF;
+    -webkit-box-shadow: inset 0 0 4px #BFBFBF;
+    box-shadow: inset 0 0 4px #BFBFBF;
+    border: 1px solid #999999;
+}
+
+.space {
+    border-bottom: 1px solid #c8c8c8;
+    height: 45px;
+}
+.score-title {
+    display: inline-block;
+    font-size: 16px;
+    color: #999999;
+    float:right;
+    margin: 35px 36px 0 0;
+}
+.final-score {
+    font-size: 36px;
+    color: #666666;
+    float:right;
+    display: inline-block;
+    margin: 18px 0 0 0;
+}
+.score-bar {
+    height: 119px;
+    border-bottom: 1px solid #c8c8c8;
+}
+.total-score {
+    font-size: 18px;
+    color: #666666;
+    float: right;
+    display: inline-block;
+    margin: 34px 10px 0 0;
+}
+.txt-comment {
+    width: 914px;
+    height: 94px;
+    margin: 15px 0 55px 10px;
+}
+.submit-btn {
+    width: 260px;
+    height: 60px;
+    margin: 40px auto 30px auto;
+    background-color: #4d4d4d;
+    border-radius: 3px;
+    box-shadow: 0px 2px 2px #d8d8d8, 2px 2px 2px #d8d8d8, -2px 2px 2px #d8d8d8, 2px -2px 2px #d8d8d8, -2px -2px 2px #d8d8d8;
+    -moz-box-shadow: 0px 2px 2px #d8d8d8, 2px 2px 2px #d8d8d8, -2px 2px 2px #d8d8d8, 2px -2px 2px #d8d8d8, -2px -2px 2px #d8d8d8;
+    -webkit-box-shadow: 0px 2px 2px #d8d8d8, 2px 2px 2px #d8d8d8, -2px 2px 2px #d8d8d8, 2px -2px 2px #d8d8d8, -2px -2px 2px #d8d8d8;
+    text-align: center;
+    cursor: pointer;
+}
+.submit-btn p{
+    font-size: 24px;
+    color: #fefefe;
+    padding-top: 15px;
+    margin: 0;
+}
+.comment-all{
+    padding: 0 10px 75px 10px;
+}
+.irc-name {
+    height: 50px;
+    background: #126492;
+}
+.irc-name p{
+    margin: 0;
+    font-size: 20px;
+    color: #FFFFFF;
+    padding-left: 10px;
+    line-height: 50px;
+}
+.eng {
+    font-family: 'Helvetica Light', 'Helvetica', Arial, sans-serif;
+}
+.content-eng {
+    margin-top: -10px;
+    padding: 0 475px 12px 120px;
+    font-size: 13.5px;
+    color: #666666;
+    font-weight: 100;
+    border-bottom: 1px solid #c8c8c8;
+    width: 345px;
+}
+.title-eng {
+    margin: 4px 60px 3px;
+    font-weight: 100;
+    color: #666666;
+    font-size: 14px;
+}
+.title-section-eng {
+    font-size: 14px;
+    padding-left: 12px;
+    margin-top:0;
+    color: #999999;
+}
+.submit-btn p {
+    cursor: pointer;
+}
+/* End CSS for content irc*/

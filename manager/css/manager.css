@@ -1,0 +1,270 @@
+
+/* CSS for content irc*/
+.content-center {
+    width: 1200px;
+    margin: 0 auto;
+    padding-bottom: 60px;
+}
+.content-section {
+    width: 1000px;
+    margin: 0 auto;
+}
+.breadcrumb {
+    font-size: 14px;
+    padding-top:3px;
+    margin-bottom: 10px;
+}
+.breadcrumb p{
+    display: inline-block;
+}
+
+.title-table {
+    height: 45px;
+    padding-top: 15px;
+    padding-left: 20px;
+    background-color: #ebebeb;
+    font-size: 24px;
+    border-bottom: 1px solid #c8c8c8;
+}
+.detail-content {
+    background-color: #fafafa;
+    box-shadow: 0px 2px 5px #d1d1d1;
+    -moz-box-shadow: 0px 2px 5px #d1d1d1;
+    -webkit-box-shadow: 0px 2px 5px #d1d1d1;
+    margin-bottom: 40px;
+}
+.center-content {
+    padding-bottom: 30px;
+}
+.table-1 th {
+    text-align: left;
+    padding-left: 10px;
+    font-size: 14px;
+    color: #999999;
+    font-weight: normal;
+    height: 30px;
+}
+.col-1{
+    width: 100px;
+}
+.col-2{
+    width: 355px;
+}
+.col-3{
+    width: 160px;
+}
+.col-4{
+    width: 140px;
+}
+.red {
+    color: #ff3333;
+}
+.green {
+    color: #009688;
+}
+.table-1 td {
+    padding-left: 10px;
+    font-size: 16px;
+    color: #4d4d4d;
+}
+.col-2-content {
+    color: #00b0ff;
+    line-height: 25px;
+    display: inline-block;
+    word-wrap: break-word;
+    width: 325px;
+    padding-right: 30px;
+}
+.col-3-content {
+    font-size: 14px;
+    word-wrap: break-word;
+    width: 160px;
+}
+.col-4-content {
+    font-size: 16px;
+    word-wrap: break-word;
+    width: 140px;
+}
+.table-1 th {
+    border-bottom: 1px solid #c8c8c8;
+}
+.table-1 {
+    width: 100%;
+    margin-top: 38px;
+}
+.img-detail {
+    position: relative;
+    height: 39px;
+    float: left;
+    width: 124px;
+}
+.img-detail img, .img-review img {
+    position: absolute;
+}
+.img-detail p, .img-review p{
+    position: absolute;
+    margin: 0;
+    top: 9px;
+    color: #4c4c4c;
+}
+.img-review p {
+    left: 31px;
+}
+.img-detail p {
+    left: 41px;
+}
+.img-review {
+    position: relative;
+    height: 39px;
+    float: left;
+    width: 160px;
+}
+.col2-1 {
+    width: 240px;
+}
+.col2-2 {
+    width: 539px;
+}
+.content-eng {
+    margin: -10px 320px 0 122px;
+    width: 335px;
+    font-size: 13.5px;
+    color: #666666;
+    font-weight: 100;
+}
+.eng {
+    font-family: 'Helvetica Light', 'Helvetica', Arial, sans-serif
+}
+.section {
+    background: #FFFFFF;
+    border: 1px solid #c8c8c8;
+    margin-bottom: 40px;
+    margin-top: 10px;
+}
+.title-section {
+    height: 45px;
+    line-height: 45px;
+    padding-left: 20px;
+    background: #e6e6e6;
+    color: #666666;
+    font-size: 18px;
+    border-bottom: 1px solid #c8c8c8;
+}
+.section table{
+    margin: 18px 20px 30px;
+}
+.section th, .section td {
+    border-bottom: 1px solid #c8c8c8;
+}
+.section th {
+    font-size: 14px;
+    color: #999999;
+    font-weight: normal;
+    text-align: left;
+}
+.section td.red {
+    color: #ff3333;
+}
+.section td.green {
+    color: #009688;
+}
+.sec-col-1 {
+    padding-left: 10px;
+    width: 170px;
+}
+.sec-col-2 {
+    width: 127px;
+}
+.sec-col-3 {
+    width: 110px;
+}
+.sec-col-4 {
+    width: 325px;
+}
+.sec-col-5 {
+    width: 160px;
+}
+.section td.sec-cont-3 {
+    padding-left: 10px;
+    font-size: 18px;
+}
+.sec-cont-4 p {
+    overflow: hidden;
+    width: 290px;
+    height: 45px;
+}
+.section td {
+    font-size: 16px;
+    color: #666666;
+}
+.big-section {
+    padding: 0 30px;
+    border-bottom: 1px solid #c8c8c8;
+}
+.btn-back, .btn-next {
+    background: #999999;
+    width: 90px;
+    height: 35px;
+    display: inline-block;
+}
+.btn-back.disable, .btn-next.disable {
+    background: #dddddd;
+}
+.btn-back {
+    float:left
+}
+.btn-next {
+    float:right
+}
+.btn-back p, .btn-next p{
+    margin: 0;
+    display: inline-block;
+    padding: 7px 10px;
+    color: #fcfcfc;
+}
+.btn-back img, .btn-next img{
+    display: inline-block;
+    margin-top: -5px;
+}
+.page-no , .page-no p{
+    display: inline-block;
+    height: 35px;
+    margin: 0;
+}
+.page-no {
+    margin-top: 7px;
+    height: 28px;
+}
+.page-bottom {
+    text-align: center;
+    margin-top: 20px;
+    padding: 0 30px;
+}
+.current-page {
+    font-weight: bold;
+    color: #4c4c4c;
+    font-size: 18px;
+}
+.total-page {
+    font-size: 16px;
+    color: #737373;
+}
+.submit-btn {
+    width: 370px;
+    height: 60px;
+    margin: 40px auto 30px auto;
+    background-color: #4d4d4d;
+    border-radius: 3px;
+    box-shadow: 0px 2px 2px #d8d8d8, 2px 2px 2px #d8d8d8, -2px 2px 2px #d8d8d8, 2px -2px 2px #d8d8d8, -2px -2px 2px #d8d8d8;
+    -moz-box-shadow: 0px 2px 2px #d8d8d8, 2px 2px 2px #d8d8d8, -2px 2px 2px #d8d8d8, 2px -2px 2px #d8d8d8, -2px -2px 2px #d8d8d8;
+    -webkit-box-shadow: 0px 2px 2px #d8d8d8, 2px 2px 2px #d8d8d8, -2px 2px 2px #d8d8d8, 2px -2px 2px #d8d8d8, -2px -2px 2px #d8d8d8;
+    text-align: center;
+    cursor: pointer;
+}
+.submit-btn p{
+    font-size: 24px;
+    color: #fefefe;
+    padding-top: 15px;
+    margin: 0;
+}
+/* End CSS for content irc*/

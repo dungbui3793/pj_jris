@@ -1,0 +1,325 @@
+
+/* CSS for content irc*/
+.content-center {
+    width: 1200px;
+    margin: 0 auto;
+    background-color: #f5f5f5;
+    padding-bottom: 50px;
+}
+.content-section {
+    width: 1000px;
+    margin: 0 auto;
+}
+.breadcrumb {
+    font-size: 14px;
+    padding-top:3px;
+    margin-bottom: 10px;
+}
+.breadcrumb p{
+    display: inline-block;
+}
+.breadcrumb img {
+    margin: 0 5px 4px 5px;
+}
+.title-table {
+    height: 45px;
+    padding-top: 15px;
+    padding-left: 20px;
+    background-color: #ebebeb;
+    border-bottom: 1px solid #c8c8c8;
+}
+.title-text {
+    font-size: 24px;
+    margin:0;
+    float:left;
+}
+.img-detail.btn.button-right{
+    float: right;
+    width: 168px;
+    margin-top: -8px;
+    margin-right: 35px;
+}
+.img-detail.btn.button-right p{
+    font-size: 18px;
+    color: #009688;
+    top: 12px;
+    left: 24px;
+}
+
+.detail-content {
+    background-color: #fafafa;
+    box-shadow: 0px 2px 5px #d1d1d1;
+    -moz-box-shadow: 0px 2px 5px #d1d1d1;
+    -webkit-box-shadow: 0px 2px 5px #d1d1d1;
+}
+.center-content {
+    margin: 30px;
+}
+.step{
+    position: relative;
+    height: 50px;
+}
+.step img {
+    position: absolute;
+}
+.step p{
+    position: absolute;
+    font-size: 20px;
+    margin: 0;
+    top: 12px;
+    color: #FFFFFF
+}
+.step-1 {
+    left: 70px;
+}
+.step-2 {
+    left: 375px;
+}
+.step-3 {
+    left: 700px;
+}
+.table-1 {
+    margin-top: 25px;
+    width: 100%;
+}
+.table-1 th {
+    font-size: 14px;
+    color: #999999;
+    font-weight: normal;
+    text-align: left;
+    padding:6px 10px;
+    border-bottom: 1px solid #c8c8c8;
+}
+.table-1 td{
+    padding: 0 10px;
+    border-bottom: 1px solid #c8c8c8;
+}
+.table-1 td p{
+    word-wrap: break-word;
+    display: inline-block;
+}
+.No{
+    width: 90px;
+}
+.No-detail {
+    width: 370px;
+}
+.cost {
+    width: 140px;
+}
+.name {
+    width: 120px;
+}
+p.No-detail{
+    color: #00b0ff;
+}
+.img-detail {
+    position: relative;
+    height: 39px;
+}
+.img-detail img {
+    position: absolute;
+}
+.img-detail p {
+    position: absolute;
+    margin: 0;
+    left: 31px;
+    top: 9px;
+    color: #4c4c4c;
+}
+.text-section-1 {
+    margin-top: 28px;
+    height: 115px;
+    background-color: #e8eef2;
+    margin-bottom: 6px;
+}
+.font-medium {
+    padding-top: 17px;
+    font-size: 16px;
+    padding-left: 35px;
+    margin: 0;
+}
+.font-small {
+    font-size: 12px;
+    margin: 0;
+    padding-left: 29px;
+    padding-top: 3px;
+}
+.font-small.left-space {
+    padding-left: 101px;
+}
+.title-section {
+    color: #126492;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 19px 0 11px;
+    display: inline-block;
+}
+.section-detail {
+    margin: 5px 0 10px 35px;
+    font-size: 16px;
+    color: #4d4d4d;
+    display: inline-block;
+}
+.table-score {
+    margin-left: 35px;
+
+}
+.table-score .col-1{
+    color: #999999;
+    font-size: 16px;
+    padding-top: 12px;
+    vertical-align: top;
+}
+.table-score .col-2{
+    padding-left: 10px;
+    padding-top: 12px;
+    vertical-align: top;
+}
+.txt-score, .txt-comment {
+    -moz-box-shadow: inset 0 0 4px #BFBFBF;
+    -webkit-box-shadow: inset 0 0 4px #BFBFBF;
+    box-shadow: inset 0 0 4px #BFBFBF;
+    border: 1px solid #999999;
+}
+.txt-score {
+    width: 736px;
+    height: 44px;
+    padding-left: 10px;
+}
+.space {
+    border-bottom: 1px solid #c8c8c8;
+    height: 45px;
+}
+.alert-img {
+    margin: 24px 3px 0 -8px;
+    visibility: hidden;
+    float:left;
+}
+.alert-txt {
+    font-size: 14px;
+    color: #ff3333;
+    margin-top: 2px;
+    visibility: hidden;
+    display: inline-block;
+}
+.alert-table.active{
+    margin-top: 30px;
+    height: 73px;
+    border: 1px solid #ff3333;
+    margin-bottom: 7px;
+    visibility: visible;
+}
+.alert-img.active {
+    visibility: visible;
+}
+.alert-txt.active {
+    visibility: visible;
+}
+.alert-table {
+    height: 0;
+    visibility: hidden;
+    margin: 0;
+}
+.alert-title {
+    font-size: 14px;
+    font-weight: bold;
+    display: inline-block;
+    margin: 18px 0 0 56px;
+    color: #ff3333;
+}
+.alert-icon-big {
+    margin-left: 56px;
+}
+.alert-content {
+    display: inline-block;
+    font-size: 12px;
+    margin: 0;
+}
+.txt-comment {
+    width: 904px;
+    height: 94px;
+    margin: 15px 0 55px 10px;
+    padding-left: 10px;
+}
+.submit-btn {
+    width: 260px;
+    display: inline-block;
+    height: 60px;
+    margin: 0 36px;
+    background-color: #4d4d4d;
+    border-radius: 3px;
+    box-shadow: 0px 2px 2px #d8d8d8, 2px 2px 2px #d8d8d8, -2px 2px 2px #d8d8d8, 2px -2px 2px #d8d8d8, -2px -2px 2px #d8d8d8;
+    -moz-box-shadow: 0px 2px 2px #d8d8d8, 2px 2px 2px #d8d8d8, -2px 2px 2px #d8d8d8, 2px -2px 2px #d8d8d8, -2px -2px 2px #d8d8d8;
+    -webkit-box-shadow: 0px 2px 2px #d8d8d8, 2px 2px 2px #d8d8d8, -2px 2px 2px #d8d8d8, 2px -2px 2px #d8d8d8, -2px -2px 2px #d8d8d8;
+    text-align: center;
+    cursor: pointer;
+}
+.submit-btn p{
+    font-size: 24px;
+    color: #fefefe;
+    padding-top: 15px;
+    margin: 0;
+}
+.small-btn {
+    width: 260px;
+    height: 60px;
+    margin: 40px 0 30px 219px;
+    display: inline-block;
+    text-align: center;
+    background-color: #FFFFFF;
+    border: 1px solid #009688;
+    border-radius: 3px;
+    cursor: pointer;
+    box-shadow: 0px 2px 2px #e1e1e1, 2px 2px 2px #e1e1e1, -2px 2px 2px #e1e1e1, 2px -2px 2px #e1e1e1, -2px -2px 2px #e1e1e1;
+    -moz-box-shadow: 0px 2px 2px #e1e1e1, 2px 2px 2px #e1e1e1, -2px 2px 2px #e1e1e1, 2px -2px 2px #e1e1e1, -2px -2px 2px #e1e1e1;
+    -webkit-box-shadow: 0px 2px 2px #e1e1e1, 2px 2px 2px #e1e1e1, -2px 2px 2px #e1e1e1, 2px -2px 2px #e1e1e1, -2px -2px 2px #e1e1e1;
+}
+.small-btn p{
+    font-size: 24px;
+    padding-top: 15px;
+    color: #009688;
+    margin: 0;
+}
+
+
+/* CSS for slider irc*/
+.ui-widget-header {
+    background: #1e9ad1;
+}
+.ui-slider .ui-slider-handle {
+    height: 40px;
+    width: 40px;
+}
+.ui-slider-horizontal {
+    height: 18px;
+}
+.ui-slider-horizontal .ui-slider-handle {
+    top: -10px;
+    margin-left: -15px;
+}
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
+    border: 0;
+    background: url("../images/btn-slider.png") 50% 50% repeat-x;
+    font-weight: normal;
+    color: #555555;
+    z-index: 0;
+}
+.ui-slider-range.ui-widget-header.ui-corner-all.ui-slider-range-min {
+    z-index: 0;
+}
+.ui-state-focus {
+    outline: 0 none !important;
+}
+.txt-slider {
+    width: 48px;
+    margin: -5px 0 0;
+    float:left;
+    font-size: 24px;
+}
+.score-slider{
+    float:right;
+    width: 695px;
+}
+/* End CSS for slider irc*/
+/* End CSS for content irc*/
