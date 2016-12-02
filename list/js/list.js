@@ -60,4 +60,46 @@ $(document).ready(function(){
         }
     });
 
+
+    var $get_popup_info = $(".popup-info-wrap .popup-info-wrap--pop");
+
+    $get_popup_info.each(function() {
+        var $this_popup_info = $(this);
+        fix_margin($this_popup_info);
+        $this_popup_info.find(".click-fix-size").click(function() {
+            if($this_popup_info.hasClass("popup-expand-active")) {
+                $this_popup_info.removeClass("popup-expand-active popup--active");
+            }
+            else {
+                $this_popup_info.toggleClass("popup--active");
+                fix_margin($this_popup_info);
+            }
+        });
+
+        $this_popup_info.find(".click-expand").click(function() {
+            $this_popup_info.addClass("popup-expand-active popup--active");
+            fix_margin($this_popup_info);
+            $get_popup_info.not($this_popup_info).removeClass("popup--active");
+
+            if($get_popup_info.not($this_popup_info).hasClass("popup-expand-active")) {
+                $get_popup_info.not($this_popup_info).removeClass("popup-expand-active");
+            }
+        });
+
+        $this_popup_info.find(".click-expand-02").click(function() {
+            $this_popup_info.removeClass("popup-expand-active");
+        });
+
+
+    });
+
+
 });
+
+function fix_margin(target) {
+    target.css("margin-top",-(target.height()));
+}
+
+$(window).resize(function() {
+
+})
