@@ -8,6 +8,9 @@
 }
 
 .popup-info-wrap--pop {
+  &.clone-item {
+    display: none;
+  }
   display: inline-block;
   width: 50%;
   max-width: 300px;
