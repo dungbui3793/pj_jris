@@ -85,6 +85,7 @@
 
 .alert-txt {
   color: #ff3333;
+  margin-bottom: 10px;
   display: none; }
   .alert-txt.active {
     display: block; }
@@ -151,9 +152,46 @@
   .step-wrap__01__footer .footer__btn--submit {
     background-color: #126492;
     color: #fff; }
+    .step-wrap__01__footer .footer__btn--submit.btn-step-02 {
+      display: none; }
+    .step-wrap__01__footer .footer__btn--submit.btn-step-03 {
+      display: none; }
   .step-wrap__01__footer .footer__btn--back {
     border: 1px solid #009688;
     color: #009688; }
+    .step-wrap__01__footer .footer__btn--back.btn-step-02 {
+      display: none; }
+
+.step-02 {
+  display: none; }
+  .step-02 .step {
+    background-image: url("../images/step-2.png"); }
+  .step-02 .step-01__block .step-01__block__score .custom-l-r__right {
+    line-height: 26px;
+    font-size: 16px; }
+    .step-02 .step-01__block .step-01__block__score .custom-l-r__right .real-score {
+      font-size: 20px; }
+    .step-02 .step-01__block .step-01__block__score .custom-l-r__right.comment-1, .step-02 .step-01__block .step-01__block__score .custom-l-r__right.comment-2, .step-02 .step-01__block .step-01__block__score .custom-l-r__right.comment-3, .step-02 .step-01__block .step-01__block__score .custom-l-r__right.comment-4, .step-02 .step-01__block .step-01__block__score .custom-l-r__right.comment-5, .step-02 .step-01__block .step-01__block__score .custom-l-r__right.comment-6 {
+      font-size: 12px; }
+  .step-02 .step-01__block.score-bar {
+    text-align: right;
+    line-height: 28px; }
+    .step-02 .step-01__block.score-bar .score-title {
+      color: #999999;
+      font-size: 12px; }
+    .step-02 .step-01__block.score-bar .final-score {
+      font-size: 26px; }
+    .step-02 .step-01__block.score-bar .total-score {
+      font-size: 16px; }
+
+.step-03 {
+  display: none; }
+  .step-03 .step {
+    background-image: url("../images/step-3.png"); }
+  .step-03 .text-center {
+    font-size: 20px;
+    text-align: center;
+    margin-top: 40px; }
 
 /* CSS for slider irc*/
 .ui-widget-header {

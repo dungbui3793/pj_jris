@@ -119,6 +119,7 @@
 
 .alert-txt {
   color: #ff3333;
+  margin-bottom: 10px;
   display: none;
   &.active {
     display: block;
@@ -202,10 +203,66 @@
   .footer__btn--submit {
     background-color: #126492;
     color: #fff;
+    &.btn-step-02 {
+      display: none;
+    }
+    &.btn-step-03 {
+      display: none;
+    }
   }
   .footer__btn--back {
     border: 1px solid #009688;
     color: #009688;
+    &.btn-step-02 {
+      display: none;
+    }
+  }
+}
+
+.step-01 {
+  //display: none;
+}
+
+.step-02 {
+  display: none;
+  .step {
+    background-image: url("../images/step-2.png");
+  }
+  .step-01__block .step-01__block__score .custom-l-r__right {
+    line-height: 26px;
+    font-size: 16px;
+    .real-score {
+      font-size: 20px;
+    }
+    &.comment-1,&.comment-2,&.comment-3,&.comment-4,&.comment-5,&.comment-6 {
+      font-size: 12px;
+    }
+  }
+  .step-01__block.score-bar {
+    text-align: right;
+    line-height: 28px;
+    .score-title {
+      color: #999999;
+      font-size: 12px;
+    }
+    .final-score {
+      font-size: 26px;
+    }
+    .total-score {
+      font-size: 16px;
+    }
+  }
+}
+
+.step-03 {
+  display: none;
+  .step {
+    background-image: url("../images/step-3.png");
+  }
+  .text-center {
+    font-size: 20px;
+    text-align: center;
+    margin-top: 40px;
   }
 }
 
