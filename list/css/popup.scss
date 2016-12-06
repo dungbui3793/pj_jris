@@ -50,9 +50,9 @@
     -moz-box-shadow: none;
     margin: 0 !important;
     .popup-info {
-      width: 80%;
-      height: 80%;
-      margin: 10%;
+      width: 1000px;
+      height: 90%;
+      margin: 5% auto;
     }
     .click-expand {
       display: none;
@@ -68,6 +68,7 @@
     }
     .popup-info__body {
       height: auto;
+      padding: 30px 0;
     }
   }
 }
