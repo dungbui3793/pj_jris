@@ -17,7 +17,7 @@ $(document).ready(function(){
         for (var i = 0; i < 5; i++) {
             tableContent += '<tr><td><p class="col-1-content">'+json.List[i].No+curPage+'</p></td> '+
                 '<td><a href="#" target="_blank" class="link"><p class="col-2-content">'+json.List[i].Content+curPage+'</p></a></td>' +
-                '<td><p class="col-3-c">'+json.List[i].Name+curPage+'</p></td>' +
+                '<td><p class="col-3-c col-3-content">'+json.List[i].Name+curPage+'</p></td>' +
                 '<td><div class="img-detail btn popup-btn"><img src="images/detail.png"><p>詳細を見る</p></div></td>' +
                 '</tr>';
         }
@@ -46,7 +46,7 @@ $(document).ready(function(){
         for (var i = 0; i < 5; i++) {
             tableContent += '<tr><td><p class="col-1-content">'+json.List[i].No+curPage+'</p></td> '+
                 '<td><a href="#" target="_blank" class="link"><p class="col-2-content">'+json.List[i].Content+curPage+'</p></a></td>' +
-                '<td><p class="col-3-c">'+json.List[i].Name+curPage+'</p></td>' +
+                '<td><p class="col-3-c col-3-content">'+json.List[i].Name+curPage+'</p></td>' +
                 '<td><div class="img-detail btn popup-btn"><img src="images/detail.png"><p>詳細を見る</p></div></td>' +
                 '</tr>';
         }
@@ -96,6 +96,42 @@ $(document).ready(function(){
         } else {
             $get_this_click.attr("tag",get_number);
             var $body = $(".clone-item").clone().removeClass("clone-item").attr('id',get_number).prependTo(".popup-info-wrap");
+            set_name($("#"+get_number).find(".table-1 .table-1__row .table-1__row--02"),$("#"+get_number).find(".table-1 .table-1__row-01 .table-1__row--02"),$("#"+get_number).find(".table-1 .table-1__row-02 .table-1__row--02"));
+
+            $body.find(".get-id").text(data_array.get_id);
+            $body.find(".get-title").text(data_array.get_title);
+            if(data_array.get_budget == "") {
+                $body.find(".get-budget").text("¥1,000,000,000");
+            } else {
+                $body.find(".get-budget").text(data_array.get_budget);
+            }
+            $body.find(".get-dr").text(data_array.get_dr);
+            $( ".score-slider" ).slider({
+                range: "min",
+                value: 0.0,
+                min: 0,
+                max: 5,
+                step: 0.1
+            });
+
+            $( "#score-1" ).on( "slide", function( event, ui ) {
+                $( "#txt-score-1").text(ui.value.toFixed(1));
+            } );
+            $( "#score-2" ).on( "slide", function( event, ui ) {
+                $( "#txt-score-2").text(ui.value.toFixed(1));
+            } );
+            $( "#score-3" ).on( "slide", function( event, ui ) {
+                $( "#txt-score-3").text(ui.value.toFixed(1));
+            } );
+            $( "#score-4" ).on( "slide", function( event, ui ) {
+                $( "#txt-score-4").text(ui.value.toFixed(1));
+            } );
+            $( "#score-5" ).on( "slide", function( event, ui ) {
+                $( "#txt-score-5").text(ui.value.toFixed(1));
+            } );
+            $( "#score-6" ).on( "slide", function( event, ui ) {
+                $( "#txt-score-6").text(ui.value.toFixed(1));
+            } );
             //$body.find("#get-id").text("hello");
         }
     });
