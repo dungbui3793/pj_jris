@@ -196,6 +196,7 @@ $(document).ready(function(){
         var $this_popup_info = $(this).parents(".popup-info-wrap--pop");
         if($this_popup_info.hasClass("popup-expand-active")) {
             $this_popup_info.removeClass("popup-expand-active popup--active");
+            fix_margin($this_popup_info);
         }
         else {
             $this_popup_info.toggleClass("popup--active");
