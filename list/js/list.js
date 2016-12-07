@@ -78,23 +78,6 @@ $(document).ready(function(){
 
         fix_window();
 
-        // Clone popup
-        //var formPopup = $(".clone-item").clone().removeClass("clone-item").prependTo(".popup-info-wrap");
-        //
-        //// Add popup to array
-        //arr.push(formPopup);
-        //
-        //_.each(arr, function(_popup){
-        //    console.log(_popup);
-        //});
-        //
-        //console.log(arr);
-
-
-
-
-
-
         var $get_this_click = $(this);//
         var get_number = guid();
 
@@ -120,15 +103,12 @@ $(document).ready(function(){
 
             arr.push($body.attr('id'));
             var lengthArr = arr.length;
-            console.log(arr[1]);
             _.each(arr, function(_popupId, index) {
                 if(index < (lengthArr - count_max_popup)) {
                     //$(arr[index]).css('display', 'none');
                     $('#' + _popupId).css('display', 'none');
                 }
             });
-
-
 
             $body.find(".get-id").text(data_array.get_id);
             $body.find(".get-title").text(data_array.get_title);
@@ -139,48 +119,36 @@ $(document).ready(function(){
             }
             $body.find(".get-dr").text(data_array.get_dr);
 
-        //    $( ".score-slider" ).slider({
-        //        range: "min",
-        //        value: 0.0,
-        //        min: 0,
-        //        max: 5,
-        //        step: 0.1
-        //    });
-        //
-        //    $( "#score-1" ).on( "slide", function( event, ui ) {
-        //        $( "#txt-score-1").text(ui.value.toFixed(1));
-        //    } );
-        //    $( "#score-2" ).on( "slide", function( event, ui ) {
-        //        $( "#txt-score-2").text(ui.value.toFixed(1));
-        //    } );
-        //    $( "#score-3" ).on( "slide", function( event, ui ) {
-        //        $( "#txt-score-3").text(ui.value.toFixed(1));
-        //    } );
-        //    $( "#score-4" ).on( "slide", function( event, ui ) {
-        //        $( "#txt-score-4").text(ui.value.toFixed(1));
-        //    } );
-        //    $( "#score-5" ).on( "slide", function( event, ui ) {
-        //        $( "#txt-score-5").text(ui.value.toFixed(1));
-        //    } );
-        //    $( "#score-6" ).on( "slide", function( event, ui ) {
-        //        $( "#txt-score-6").text(ui.value.toFixed(1));
-        //    } );
+            $( ".score-slider" ).slider({
+                range: "min",
+                value: 0.0,
+                min: 0,
+                max: 5,
+                step: 0.1
+            });
+
+            $( "#score-1" ).on( "slide", function( event, ui ) {
+                $( "#txt-score-1").text(ui.value.toFixed(1));
+            } );
+            $( "#score-2" ).on( "slide", function( event, ui ) {
+                $( "#txt-score-2").text(ui.value.toFixed(1));
+            } );
+            $( "#score-3" ).on( "slide", function( event, ui ) {
+                $( "#txt-score-3").text(ui.value.toFixed(1));
+            } );
+            $( "#score-4" ).on( "slide", function( event, ui ) {
+                $( "#txt-score-4").text(ui.value.toFixed(1));
+            } );
+            $( "#score-5" ).on( "slide", function( event, ui ) {
+                $( "#txt-score-5").text(ui.value.toFixed(1));
+            } );
+            $( "#score-6" ).on( "slide", function( event, ui ) {
+                $( "#txt-score-6").text(ui.value.toFixed(1));
+            } );
             //$body.find("#get-id").text("hello");
         }
 
-
-
-
-
-
-
-
-
-
-
     });
-
-
 
     var popup_info_wrap = $(".popup-info-wrap");
     popup_info_wrap.on('click','.click-close', function() {
@@ -220,7 +188,6 @@ $(document).ready(function(){
             $this_popup_info.toggleClass("popup--active");
             fix_margin($this_popup_info);
         }
-
     });
 
     popup_info_wrap.on('click','.click-expand', function() {
@@ -258,9 +225,6 @@ function fix_window() {
 
 
     }
-    //console.log($(window).width());
-
-    //console.log($(".popup-info-wrap .popup-info-wrap--pop").length);
 }
 
 $(window).resize(function() {
