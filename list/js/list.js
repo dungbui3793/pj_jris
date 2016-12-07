@@ -99,6 +99,7 @@ $(document).ready(function(){
             var $body = $(".clone-item").clone().removeClass("clone-item").attr('id',get_number).prependTo(".popup-info-wrap");
             set_name($("#"+get_number).find(".table-1 .table-1__row .table-1__row--02"),$("#"+get_number).find(".table-1 .table-1__row-01 .table-1__row--02"),$("#"+get_number).find(".table-1 .table-1__row-02 .table-1__row--02"));
 
+            fix_margin($body);
 
             arr.push($body.attr('id'));
             var sum = 0;
@@ -167,36 +168,15 @@ $(document).ready(function(){
         $this_popup_info.remove();
 
         fix_window();
-
-        // Get array length
-        var lengthArr = arr.length;
-
-        // Show previous popup
-        //console.log(arr[lengthArr - count_max_popup - 1]);
-        //var previousPopupId = arr[lengthArr - count_max_popup - 1];
-        //$('#' + previousPopupId).css('display', 'inline-block');
-        //
-        //// Get current popup Id
-        //var currentId = $this_popup_info.attr('id');
-        //
-        //// Remove current popup from array
-        //_.remove(arr, function(_id) {
-        //    return _id == currentId;
-        //});
-
-        // Rerender popup
-        //_.each(arr, function(_popupId, index) {
-        //    if(index < (lengthArr - count_max_popup)) {
-        //        $('#' + _popupId).css('display', 'none');
-        //    }
-        //});
     });
 
     popup_info_wrap.on('click','.click-fix-size', function() {
         var $this_popup_info = $(this).parents(".popup-info-wrap--pop");
         if($this_popup_info.hasClass("popup-expand-active")) {
             $this_popup_info.removeClass("popup-expand-active popup--active");
-            fix_margin($this_popup_info);
+            if($("body").hasClass("ie9")) {
+                fix_margin($this_popup_info);
+            }
         }
         else {
             $this_popup_info.toggleClass("popup--active");
@@ -241,10 +221,12 @@ $(document).ready(function(){
         $this_popup_info.addClass("popup-expand-active popup--active");
         fix_margin($this_popup_info);
         $get_child.not($this_popup_info).removeClass("popup--active");
+        fix_margin($get_child.not($this_popup_info));
         $(".popup-info-wrap--pop.clone-item").addClass("popup--active");
 
         if($get_child.not($this_popup_info).hasClass("popup-expand-active")) {
             $get_child.not($this_popup_info).removeClass("popup-expand-active");
+            fix_margin($get_child.not($this_popup_info));
         }
         fix_window();
     });
@@ -252,6 +234,7 @@ $(document).ready(function(){
     popup_info_wrap.on('click','.click-expand-02', function() {
         var $this_popup_info = $(this).parents(".popup-info-wrap--pop");
         $this_popup_info.removeClass("popup-expand-active");
+        fix_margin($this_popup_info);
     });
 });
 
