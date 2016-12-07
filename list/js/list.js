@@ -75,9 +75,6 @@ $(document).ready(function(){
     var $window_width = $(window).width();
     var count_max_popup = parseInt($window_width / 490);
     $(".detail-content").on('click','.popup-btn',function() {
-
-        fix_window();
-
         var $get_this_click = $(this);//
         var get_number = guid();
 
@@ -93,8 +90,10 @@ $(document).ready(function(){
 
         var $get_this_popup_data = $(".popup-info-wrap").find("#"+$get_this_click.attr("tag"));
         if($get_this_popup_data.length > 0) {
+            $get_this_popup_data.prependTo(".popup-info-wrap");
             $get_this_popup_data.addClass("popup--active");
             fix_margin($get_this_popup_data);
+            fix_window();
         } else {
             $get_this_click.attr("tag",get_number);
             var $body = $(".clone-item").clone().removeClass("clone-item").attr('id',get_number).prependTo(".popup-info-wrap");
@@ -102,12 +101,25 @@ $(document).ready(function(){
 
 
             arr.push($body.attr('id'));
-            var lengthArr = arr.length;
-            _.each(arr, function(_popupId, index) {
-                if(index < (lengthArr - count_max_popup)) {
-                    $('#' + _popupId).css('display', 'none');
+            var sum = 0;
+            for(var i = arr.length-1; i >= 0; i--) {
+                $('#' + arr[i]).removeClass("fix-popup-window");
+
+                if($('#' + arr[i]).width() < ($window_width - sum)) {
+                    sum += $('#' + arr[i]).width()+20;
+                    $('#' + arr[i]).removeClass("fix-popup-window");
+                } else {
+                    $('#' + arr[i]).addClass("fix-popup-window");
                 }
-            });
+            }
+
+
+            //var lengthArr = arr.length;
+            //_.each(arr, function(_popupId, index) {
+            //    if(index < (lengthArr - count_max_popup)) {
+            //        $('#' + _popupId).css('display', 'none');
+            //    }
+            //});
 
             $body.find(".get-id").text(data_array.get_id);
             $body.find(".get-title").text(data_array.get_title);
@@ -154,21 +166,23 @@ $(document).ready(function(){
         var $this_popup_info = $(this).parents(".popup-info-wrap--pop");
         $this_popup_info.remove();
 
+        fix_window();
+
         // Get array length
         var lengthArr = arr.length;
 
         // Show previous popup
         //console.log(arr[lengthArr - count_max_popup - 1]);
-        var previousPopupId = arr[lengthArr - count_max_popup - 1];
-        $('#' + previousPopupId).css('display', 'inline-block');
-
-        // Get current popup Id
-        var currentId = $this_popup_info.attr('id');
-
-        // Remove current popup from array
-        _.remove(arr, function(_id) {
-            return _id == currentId;
-        });
+        //var previousPopupId = arr[lengthArr - count_max_popup - 1];
+        //$('#' + previousPopupId).css('display', 'inline-block');
+        //
+        //// Get current popup Id
+        //var currentId = $this_popup_info.attr('id');
+        //
+        //// Remove current popup from array
+        //_.remove(arr, function(_id) {
+        //    return _id == currentId;
+        //});
 
         // Rerender popup
         //_.each(arr, function(_popupId, index) {
@@ -187,48 +201,35 @@ $(document).ready(function(){
             $this_popup_info.toggleClass("popup--active");
             fix_margin($this_popup_info);
         }
+        fix_window();
 
-        //arr.push($body.attr('id'));
-
-        //var sum = 0;
-        //var lengthArr = arr.length;
-        //_.each(arr, function(_popupId, index) {
-        //    if(index >= (lengthArr - count_max_popup) ) {
-        //        sum += parseInt($('#' + _popupId).width());
-        //    }
-        //    //if(index < (lengthArr - count_max_popup)) {
-        //    //    $('#' + _popupId).css('display', 'none');
-        //    //}
-        //});
-        //
-        //var leftwidth = $window_width - sum;
-        //console.log(leftwidth);
-        //var previousPopupId = arr[lengthArr - count_max_popup - 1];
-        //if($('#' + previousPopupId).width() < leftwidth) {
-        //    $('#' + previousPopupId).css('display', 'inline-block');
-        //}
-
-
-
-
-        var sum = 0;
-        for(var i = arr.length-1; i >= 0; i--) {
-            $('#' + arr[i]).css('display', 'inline-block');
-            if($('#' + arr[i]).width() < ($window_width - sum)) {
-                sum += $('#' + arr[i]).width()+20;
-                $('#' + arr[i]).css('display', 'inline-block');
-            } else {
-                $('#' + arr[i]).css('display', 'none');
+        var array = [];
+        $(".popup-info-wrap .popup-info-wrap--pop").each(function() {
+            if(!$(this).hasClass("clone-item") && !$(this).hasClass("popup-expand-active")) {
+                array.push($(this).attr("id"));
             }
-            //console.log($('#' + arr[i]).attr("id") + ':' + $('#' + arr[i]).width());
+        });
+
+        if($this_popup_info.hasClass("popup--active")) {
+            //console.log("open");
+            //$this_popup_info.addClass("clicked");
+            //var a = array.indexOf($this_popup_info.attr("id"));
+            //console.log(a);
+
+            if($this_popup_info.hasClass("fix-popup-window")) {
+                $this_popup_info.removeClass("fix-popup-window");
+                $this_popup_info.next().addClass("fix-popup-window");
+                $this_popup_info.prev().addClass("fix-popup-window");
+                //for(var i = a; i < array.length; i++) {
+                //    $('#' + array[i]).addClass("fix-popup-window");
+                //}
+            }
+
+        } else {
+            //console.log("close");
+            fix_window();
         }
 
-        //console.log($window_width - sum);
-        //_.each(arr, function(_popupId, index) {
-        //
-        //    //console.log($('#' + _popupId).width())
-        //
-        //});
     });
 
     popup_info_wrap.on('click','.click-expand', function() {
@@ -244,6 +245,7 @@ $(document).ready(function(){
         if($get_child.not($this_popup_info).hasClass("popup-expand-active")) {
             $get_child.not($this_popup_info).removeClass("popup-expand-active");
         }
+        fix_window();
     });
 
     popup_info_wrap.on('click','.click-expand-02', function() {
@@ -253,7 +255,11 @@ $(document).ready(function(){
 });
 
 function fix_margin(target) {
-    target.css("margin-top",-(target.height()));
+    if($("body").hasClass("ie9")) {
+        target.css("top",-(target.height()));
+    } else {
+        target.css("margin-top",-(target.height()));
+    }
 }
 
 function fix_window() {
@@ -261,18 +267,20 @@ function fix_window() {
     var $window_width = $(window).width();
     var array = [];
     $(".popup-info-wrap .popup-info-wrap--pop").each(function() {
-       if(!$(this).hasClass("clone-item")) {
+       if(!$(this).hasClass("clone-item") && !$(this).hasClass("popup-expand-active")) {
            array.push($(this).attr("id"));
        }
     });
+    //console.log(array);
     var sum = 0;
-    for(var i = array.length-1; i >= 0; i--) {
+    for(var i = 0; i <array.length; i++) {
+        $('#' + array[i]).removeClass("fix-popup-window");
 
         if($('#' + array[i]).width() < ($window_width - sum)) {
             sum += $('#' + array[i]).width()+20;
-            $('#' + array[i]).css('display', 'inline-block');
+            $('#' + array[i]).removeClass("fix-popup-window");
         } else {
-            $('#' + array[i]).css('display', 'none');
+            $('#' + array[i]).addClass("fix-popup-window");
         }
         //console.log($('#' + arr[i]).attr("id") + ':' + $('#' + arr[i]).width());
     }
