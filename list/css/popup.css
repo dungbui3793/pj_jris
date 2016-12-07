@@ -9,15 +9,14 @@
 
 .popup-info-wrap--pop {
   display: inline-block;
-  width: 50%;
-  max-width: 300px;
+  width: 300px;
   margin: 0 5px;
   position: relative;
   z-index: 1; }
   .popup-info-wrap--pop.clone-item {
     display: none; }
   .popup-info-wrap--pop.popup--active {
-    max-width: 480px;
+    width: 480px;
     -webkit-box-shadow: 0px 3px 10px 0px #b0b0b0;
     -moz-box-shadow: 0px 3px 10px 0px #b0b0b0;
     box-shadow: 0px 3px 10px 0px #b0b0b0; }

@@ -105,7 +105,6 @@ $(document).ready(function(){
             var lengthArr = arr.length;
             _.each(arr, function(_popupId, index) {
                 if(index < (lengthArr - count_max_popup)) {
-                    //$(arr[index]).css('display', 'none');
                     $('#' + _popupId).css('display', 'none');
                 }
             });
@@ -113,7 +112,7 @@ $(document).ready(function(){
             $body.find(".get-id").text(data_array.get_id);
             $body.find(".get-title").text(data_array.get_title);
             if(data_array.get_budget == "") {
-                $body.find(".get-budget").text("¥1,000,000,000");
+                $body.find(".get-budget").text("---");
             } else {
                 $body.find(".get-budget").text(data_array.get_budget);
             }
@@ -188,6 +187,48 @@ $(document).ready(function(){
             $this_popup_info.toggleClass("popup--active");
             fix_margin($this_popup_info);
         }
+
+        //arr.push($body.attr('id'));
+
+        //var sum = 0;
+        //var lengthArr = arr.length;
+        //_.each(arr, function(_popupId, index) {
+        //    if(index >= (lengthArr - count_max_popup) ) {
+        //        sum += parseInt($('#' + _popupId).width());
+        //    }
+        //    //if(index < (lengthArr - count_max_popup)) {
+        //    //    $('#' + _popupId).css('display', 'none');
+        //    //}
+        //});
+        //
+        //var leftwidth = $window_width - sum;
+        //console.log(leftwidth);
+        //var previousPopupId = arr[lengthArr - count_max_popup - 1];
+        //if($('#' + previousPopupId).width() < leftwidth) {
+        //    $('#' + previousPopupId).css('display', 'inline-block');
+        //}
+
+
+
+
+        var sum = 0;
+        for(var i = arr.length-1; i >= 0; i--) {
+            $('#' + arr[i]).css('display', 'inline-block');
+            if($('#' + arr[i]).width() < ($window_width - sum)) {
+                sum += $('#' + arr[i]).width()+20;
+                $('#' + arr[i]).css('display', 'inline-block');
+            } else {
+                $('#' + arr[i]).css('display', 'none');
+            }
+            //console.log($('#' + arr[i]).attr("id") + ':' + $('#' + arr[i]).width());
+        }
+
+        //console.log($window_width - sum);
+        //_.each(arr, function(_popupId, index) {
+        //
+        //    //console.log($('#' + _popupId).width())
+        //
+        //});
     });
 
     popup_info_wrap.on('click','.click-expand', function() {
@@ -216,15 +257,26 @@ function fix_margin(target) {
 }
 
 function fix_window() {
+
     var $window_width = $(window).width();
-    var count_max_popup = parseInt($window_width / 490);
-    var $popup = $(".popup-info-wrap .popup-info-wrap--pop");
-    var $count_popup = $popup.length;
-    if($count_popup > count_max_popup) {
+    var array = [];
+    $(".popup-info-wrap .popup-info-wrap--pop").each(function() {
+       if(!$(this).hasClass("clone-item")) {
+           array.push($(this).attr("id"));
+       }
+    });
+    var sum = 0;
+    for(var i = array.length-1; i >= 0; i--) {
 
-
-
+        if($('#' + array[i]).width() < ($window_width - sum)) {
+            sum += $('#' + array[i]).width()+20;
+            $('#' + array[i]).css('display', 'inline-block');
+        } else {
+            $('#' + array[i]).css('display', 'none');
+        }
+        //console.log($('#' + arr[i]).attr("id") + ':' + $('#' + arr[i]).width());
     }
+
 }
 
 $(window).resize(function() {
