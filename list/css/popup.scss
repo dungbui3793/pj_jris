@@ -46,7 +46,7 @@
     box-shadow: 0px 3px 10px 0px rgba(176,176,176,1);
     .popup-info__body {
       height: 510px;
-      padding: 10px 0;
+      padding: 10px 0 0;
     }
     .click-max {
       display: none;
@@ -72,8 +72,10 @@
     margin: 0 !important;
     .popup-info {
       width: 1000px;
-      height: 90%;
-      margin: 5% auto;
+      height: 100%;
+      margin: auto;
+      box-sizing: border-box;
+      padding: 5% 0;
     }
     .click-expand {
       display: none;
@@ -89,7 +91,7 @@
     }
     .popup-info__body {
       height: auto;
-      padding: 30px 0;
+      padding: 30px 0 0;
     }
   }
 }

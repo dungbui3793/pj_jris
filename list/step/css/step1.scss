@@ -30,6 +30,8 @@
 }
 
 .table-1 {
+  position: relative;
+  padding-bottom: 61px;
   .table-1__row-01 {
     float: left;
     width: 16.4%;
@@ -50,6 +52,12 @@
     > * {
       border-bottom: 1px solid #c8c8c8;
       padding: 8px 0;
+      &.table-1__row--05 {
+        position: absolute;
+        width: 100%;
+        left: 0;
+        border-bottom: none;
+      }
     }
 
   }
@@ -312,6 +320,7 @@
     }
 
     .table-1 {
+      padding-bottom: 0;
       .table-1__row {
         float: none;
         width: 100%;
@@ -341,6 +350,14 @@
         }
         .table-1__row--03 {
           width: 17%;
+        }
+        .table-1__row--05 {
+          width: 10%;
+          position: inherit;
+          padding: 0;
+          .mg-detail.btn {
+            margin: 0;
+          }
         }
 
       }
