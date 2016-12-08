@@ -7,9 +7,9 @@
   z-index: 9;
   overflow: visible; }
 
-.ie9 .popup-info-wrap {
+.ie9 .popup-info-wrap, .ie .popup-info-wrap {
   bottom: 0; }
-  .ie9 .popup-info-wrap .popup-expand-active {
+  .ie9 .popup-info-wrap .popup-expand-active, .ie .popup-info-wrap .popup-expand-active {
     top: 0 !important; }
 
 .popup-info-wrap--pop {
