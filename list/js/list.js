@@ -4,7 +4,7 @@ if(isIE){
     $("body").addClass("ie");
 }
 else{
-    //alert("Not IE");
+
 }
 
 
@@ -76,14 +76,15 @@ $(document).ready(function(){
     $get_popup_info.each(function() {
         var $this_popup_info = $(this);
         fix_margin($this_popup_info);
-
     });
 
 
     $(".popup-info__body__content").load("step/index.html");
     var arr = [];
     var $window_width = $(window).width();
-    var count_max_popup = parseInt($window_width / 490);
+
+    // =============================
+    // ====== create popup =========
     $(".detail-content").on('click','.popup-btn',function() {
         var $get_this_click = $(this);//
         var get_number = guid();
@@ -95,9 +96,6 @@ $(document).ready(function(){
             get_budget: $(this).parents("tr").find(".col-4-content").text()
         };
 
-
-
-
         var $get_this_popup_data = $(".popup-info-wrap").find("#"+$get_this_click.attr("tag"));
         if($get_this_popup_data.length > 0) {
             $get_this_popup_data.prependTo(".popup-info-wrap");
@@ -107,6 +105,8 @@ $(document).ready(function(){
             fix_height($get_this_popup_data);
         } else {
             $get_this_click.attr("tag",get_number);
+
+            // clone popup
             var $body = $(".clone-item").clone().removeClass("clone-item").attr('id',get_number).prependTo(".popup-info-wrap");
             set_name($("#"+get_number).find(".table-1 .table-1__row .table-1__row--02"),$("#"+get_number).find(".table-1 .table-1__row-01 .table-1__row--02"),$("#"+get_number).find(".table-1 .table-1__row-02 .table-1__row--02"));
 
@@ -134,7 +134,7 @@ $(document).ready(function(){
             }
             $body.find(".get-dr").text(data_array.get_dr);
 
-            $( ".score-slider" ).slider({
+            $body.find( ".score-slider" ).slider({
                 range: "min",
                 value: 0.0,
                 min: 0,
@@ -142,25 +142,24 @@ $(document).ready(function(){
                 step: 0.1
             });
 
-            $( "#score-1" ).on( "slide", function( event, ui ) {
-                $( "#txt-score-1").text(ui.value.toFixed(1));
+            $body.find( "#score-1" ).on( "slide", function( event, ui ) {
+                $body.find( "#txt-score-1").text(ui.value.toFixed(1));
             } );
-            $( "#score-2" ).on( "slide", function( event, ui ) {
-                $( "#txt-score-2").text(ui.value.toFixed(1));
+            $body.find( "#score-2" ).on( "slide", function( event, ui ) {
+                $body.find( "#txt-score-2").text(ui.value.toFixed(1));
             } );
-            $( "#score-3" ).on( "slide", function( event, ui ) {
-                $( "#txt-score-3").text(ui.value.toFixed(1));
+            $body.find( "#score-3" ).on( "slide", function( event, ui ) {
+                $body.find( "#txt-score-3").text(ui.value.toFixed(1));
             } );
-            $( "#score-4" ).on( "slide", function( event, ui ) {
-                $( "#txt-score-4").text(ui.value.toFixed(1));
+            $body.find( "#score-4" ).on( "slide", function( event, ui ) {
+                $body.find( "#txt-score-4").text(ui.value.toFixed(1));
             } );
-            $( "#score-5" ).on( "slide", function( event, ui ) {
-                $( "#txt-score-5").text(ui.value.toFixed(1));
+            $body.find( "#score-5" ).on( "slide", function( event, ui ) {
+                $body.find( "#txt-score-5").text(ui.value.toFixed(1));
             } );
-            $( "#score-6" ).on( "slide", function( event, ui ) {
-                $( "#txt-score-6").text(ui.value.toFixed(1));
+            $body.find( "#score-6" ).on( "slide", function( event, ui ) {
+                $body.find( "#txt-score-6").text(ui.value.toFixed(1));
             } );
-            //$body.find("#get-id").text("hello");
         }
 
     });
@@ -232,7 +231,6 @@ $(document).ready(function(){
             fix_margin($get_child.not($this_popup_info));
         }
         fix_window();
-
 
         fix_margin_btn($get_child);
         fix_height($get_child);
