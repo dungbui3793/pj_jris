@@ -111,7 +111,7 @@ $(document).ready(function(){
             set_name($("#"+get_number).find(".table-1 .table-1__row .table-1__row--02"),$("#"+get_number).find(".table-1 .table-1__row-01 .table-1__row--02"),$("#"+get_number).find(".table-1 .table-1__row-02 .table-1__row--02"));
 
             fix_margin($body);
-
+            fix_height($body);
             arr.push($body.attr('id'));
             var sum = 0;
             for(var i = arr.length-1; i >= 0; i--) {
@@ -168,7 +168,6 @@ $(document).ready(function(){
     popup_info_wrap.on('click','.click-close', function() {
         var $this_popup_info = $(this).parents(".popup-info-wrap--pop");
         $this_popup_info.remove();
-
         fix_window();
     });
 
@@ -194,22 +193,12 @@ $(document).ready(function(){
         });
 
         if($this_popup_info.hasClass("popup--active")) {
-            //console.log("open");
-            //$this_popup_info.addClass("clicked");
-            //var a = array.indexOf($this_popup_info.attr("id"));
-            //console.log(a);
-
             if($this_popup_info.hasClass("fix-popup-window")) {
                 $this_popup_info.removeClass("fix-popup-window");
                 $this_popup_info.next().addClass("fix-popup-window");
                 $this_popup_info.prev().addClass("fix-popup-window");
-                //for(var i = a; i < array.length; i++) {
-                //    $('#' + array[i]).addClass("fix-popup-window");
-                //}
             }
-
         } else {
-            //console.log("close");
             fix_window();
         }
         fix_height($this_popup_info);
@@ -231,8 +220,6 @@ $(document).ready(function(){
             fix_margin($get_child.not($this_popup_info));
         }
         fix_window();
-
-        fix_margin_btn($get_child);
         fix_height($get_child);
     });
 
@@ -272,7 +259,6 @@ function fix_window() {
         } else {
             $('#' + array[i]).addClass("fix-popup-window");
         }
-        //console.log($('#' + arr[i]).attr("id") + ':' + $('#' + arr[i]).width());
     }
 }
 
@@ -283,16 +269,6 @@ function fix_height(target) {
     } else {
         target.find(".step-wrap__01__body").height(430);
     }
-}
-
-function fix_margin_btn(target) {
-    //if(target.hasClass("popup-expand-active")) {
-    //    if(target.find(".table-button .table-1__row-02").height() < 65) {
-    //        target.find(".table-button .mg-detail").css("bottom",0);
-    //    } else {
-    //        target.find(".table-button .mg-detail").css("bottom",10);
-    //    }
-    //}
 }
 
 $(window).resize(function() {
