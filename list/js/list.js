@@ -28,7 +28,7 @@ $(document).ready(function(){
             tableContent += '<tr><td><p class="col-1-content">'+json.List[i].No+curPage+'</p></td> '+
                 '<td><a href="#" target="_blank" class="link"><p class="col-2-content">'+json.List[i].Content+curPage+'</p></a></td>' +
                 '<td><p class="col-3-c col-3-content">'+json.List[i].Name+curPage+'</p></td>' +
-                '<td><div class="img-detail btn popup-btn"><img src="images/detail.png"><p>詳細を見る</p></div></td>' +
+                '<td><a href="pdf/test.pdf" target="_blank" class="img-detail btn"><img src="images/detail.png"><p>詳細を見る</p></a></td>' +
                 '</tr>';
         }
         $("#table-paging").empty();
@@ -57,7 +57,7 @@ $(document).ready(function(){
             tableContent += '<tr><td><p class="col-1-content">'+json.List[i].No+curPage+'</p></td> '+
                 '<td><a href="#" target="_blank" class="link"><p class="col-2-content">'+json.List[i].Content+curPage+'</p></a></td>' +
                 '<td><p class="col-3-c col-3-content">'+json.List[i].Name+curPage+'</p></td>' +
-                '<td><div class="img-detail btn popup-btn"><img src="images/detail.png"><p>詳細を見る</p></div></td>' +
+                '<td><a href="pdf/test.pdf" target="_blank" class="img-detail btn"><img src="images/detail.png"><p>詳細を見る</p></div></td>' +
                 '</tr>';
         }
         $("#table-paging").empty();
@@ -69,7 +69,6 @@ $(document).ready(function(){
             $(".btn-next").removeClass("disable");
         }
     });
-
 
     var $get_popup_info = $(".popup-info-wrap .popup-info-wrap--pop");
 
@@ -229,6 +228,7 @@ $(document).ready(function(){
         fix_margin($this_popup_info);
         $this_popup_info.find(".step-wrap__01__body").height(430);
         fix_height($this_popup_info);
+        fix_window();
     });
 });
 
@@ -248,7 +248,6 @@ function fix_window() {
            array.push($(this).attr("id"));
        }
     });
-    //console.log(array);
     var sum = 0;
     for(var i = 0; i <array.length; i++) {
         $('#' + array[i]).removeClass("fix-popup-window");
